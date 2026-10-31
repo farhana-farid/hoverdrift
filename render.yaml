@@ -1,0 +1,14 @@
+# Render blueprint: one Node web service serves the built client and the
+# WebSocket game server on the same origin (the client connects to /ws).
+services:
+  - type: web
+    name: hoverdrift
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22.18.0

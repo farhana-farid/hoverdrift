@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "description": "HOVERDRIFT - a multiplayer hover-combat arena with authoritative netcode, physics props and full game feel.",
   "scripts": {
     "dev": "concurrently -k -n SIM,WEB -c magenta,cyan \"npm:dev:server\" \"npm:dev:client\"",
@@ -16,6 +19,7 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "three": "^0.187.0",
+    "tsx": "^4.23.15",
     "ws": "^8.22.0"
   },
   "devDependencies": {
@@ -26,7 +30,6 @@
     "@types/ws": "^8.18.2",
     "@vitejs/plugin-react": "^6.1.2",
     "concurrently": "^10.0.6",
-    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vite": "^8.3.5"
   }
