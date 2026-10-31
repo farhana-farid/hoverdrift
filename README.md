@@ -40,7 +40,9 @@ Environment: `PORT` (default `8080`).
 The game needs a long-running Node process (authoritative WebSocket server), so static-only hosting such as GitHub
 Pages is not enough — the client connects to `wss://<host>/ws` on the same origin and that socket must be served.
 
-[`render.yaml`](render.yaml) is a Render blueprint: `npm ci && npm run build`, then `npm start`, health check on
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/farhana-farid/hoverdrift)
+
+The button above deploys this repo using the blueprint. [`render.yaml`](render.yaml) is a Render blueprint: `npm ci && npm run build`, then `npm start`, health check on
 `/healthz`. Point Render at this repository (New → Blueprint), or on any Node host use those same build/start
 commands. The free instance sleeps after ~15 minutes idle; the first visit after that takes ~30 s to wake.
 
