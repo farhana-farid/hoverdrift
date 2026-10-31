@@ -28,13 +28,13 @@ export function makeBrain(): BotBrain {
     nextFlip: 1 + Math.random() * 2,
     error: (Math.random() - 0.5) * 0.25,
     errorTarget: (Math.random() - 0.5) * 0.25,
-    aggression: 0.35 + Math.random() * 0.5,
+    aggression: 0.15 + Math.random() * 0.3,
     reaction: 0.2 + Math.random() * 0.25,
     lastSeen: null,
-    burst: 0.6 + Math.random() * 0.8,
+    burst: 0.8 + Math.random() * 1.2,
     resting: false,
     targetId: null,
-    acquire: 0.4 + Math.random() * 0.5,
+    acquire: 0.7 + Math.random() * 0.3,
   };
 }
 
